@@ -1,0 +1,8 @@
+.owe-line
+    .owe-line__row
+        .owe-line__title= owe_line_title
+        .back-button(onclick="window.history.back()")
+            include ../svg/back.svg
+            span Назад
+    form.owe-line__search
+        input.owe-line__search-input(placeholder="Поиск...")

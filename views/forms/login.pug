@@ -1,0 +1,17 @@
+extends base
+
+block head
+    style .main {margin: 0 !important;}
+
+block content
+    .form-header Вход
+    .login-form-container
+        form.login-form(method="POST" action="/login/")
+            .login-form__row
+                input.login-form__input(placeholder="Телефон" name="phone" type="phone" required)
+            .login-form__row
+                input.login-form__input(placeholder="Пароль" name="password" type="password" required)
+            .login-form__row
+                button.login-form__submit Войти
+            .login-form__row
+                button.login-form__back(type="button" onclick="window.history.back()") Назад

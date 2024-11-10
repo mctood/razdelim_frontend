@@ -1,0 +1,13 @@
+.owe-bill
+    .owe-bill__details-row
+        .owe-bill__avatar
+            .avatar(style={backgroundImage: `url(${bill.avatar})`})
+        .owe-bill__details
+            .owe-bill__name= bill.name
+            .owe-bill__surname= bill.surname
+    .owe-bill__amount-row
+        .owe-bill__amount!= (owed_to_me ? "<div class='sum-positive'>" : "<div class='sum-negative'>") + bill.amount + '&nbsp;₽</div>'
+        unless owed_to_me
+            .owe-bill__pay-button Оплатить
+        else
+            .owe-bill__pay-button Простить долг

@@ -1,0 +1,18 @@
+extends profile/base
+
+block content
+    .profile__avatar
+        .avatar(style={
+            width: "72px",
+            height: "72px",
+            backgroundImage: avatar,
+        })
+    .profile__details #{name} #{surname}
+    .profile__phone #{phone}
+    .profile__actions
+        button.profile__action История транзакций
+        button.profile__action Сменить имя
+        button.profile__action Выйти
+    .profile__dangerous-actions
+        button.profile__action Удалить аккаунт
+        button.profile__back-action(onclick="window.history.back()") Назад

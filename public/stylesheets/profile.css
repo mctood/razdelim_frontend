@@ -1,0 +1,66 @@
+.profile {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .profile__avatar {
+        width: 100%;
+        padding-inline: 30px;
+        display: flex;
+        justify-content: center;
+        padding-block: 20px;
+    }
+    .profile__details {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    .profile__phone {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--grey);
+    }
+    .profile__actions,
+    .profile__dangerous-actions {
+        width: 100%;
+        padding-block: 20px;
+        flex-direction: column;
+        display: flex;
+        max-width: 400px;
+        justify-content: center;
+        color: var(--grey);
+
+        .profile__action,
+        .profile__back-action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            background: var(--card);
+            color: var(--white);
+            margin-block: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--card-hover);
+            }
+        }
+        .profile__back-action {
+            color: var(--grey);
+            background: none !important;
+        }
+    }
+
+    .profile__dangerous-actions {
+        padding: 0;
+        .profile__action {
+            color: var(--danger);
+        }
+    }
+
+}

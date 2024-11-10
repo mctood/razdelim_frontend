@@ -1,0 +1,121 @@
+.form-header {
+    font-size: 36px;
+    margin: 30px 30px 0 30px;
+    font-weight: 700;
+}
+
+.add-bill-form-container {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+
+    form.add-bill-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .add-bill-form__row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            * {
+                outline: none;
+            }
+            input.add-bill-form__input {
+                padding: 20px;
+                width: 100%;
+                background: var(--card);
+                border-radius: 5px;
+                border: none;
+                color: var(--white);
+                font-family: "Product Sans", sans-serif;
+                font-size: 1rem;
+            }
+
+            select.add-bill-form__select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding: 20px;
+                width: 100%;
+                background: var(--card);
+                border-radius: 5px;
+                border: none;
+                color: var(--white);
+                font-family: "Product Sans", sans-serif;
+                font-size: 1rem;
+                option {
+                    color: #000;
+                    &.primary {
+                        font-weight: 700;
+                    }
+                }
+                option[disabled] {
+                    display: none;
+                    color: var(--grey);
+                }
+            }
+
+            textarea.add-bill-form__textarea {
+                padding: 20px;
+                width: 100%;
+                background: var(--card);
+                border: none;
+                resize: none;
+                min-height: 200px;
+                color: var(--white);
+                border-radius: 5px;
+                font-family: "Product Sans", sans-serif;
+                font-size: 1rem;
+            }
+
+            button.add-bill-form__submit,
+            button.add-bill-form__back {
+                background: var(--primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                color: var(--white);
+                cursor: pointer;
+                padding: 20px 30px;
+                border-radius: 5px;
+                font-size: 16px;
+                width: 100%;
+                font-family: "Product Sans", sans-serif;
+            }
+
+            button.add-bill-form__back {
+                background: none;
+                color: var(--grey)
+            }
+
+            .add-bill-form__checks {
+                padding: 20px;
+                width: 100%;
+                background: var(--card);
+                border: none;
+                color: var(--white);
+                border-radius: 5px;
+                font-family: "Product Sans", sans-serif;
+                font-size: 1rem;
+
+                label {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    span {
+                        font-size: 16px;
+                    }
+                    input {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

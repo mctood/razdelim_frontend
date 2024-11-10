@@ -1,0 +1,158 @@
+.group__owe-line {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .group__owe-line__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .group__owe-line__title {
+            font-size: 26px;
+            font-family: "Product Sans", sans-serif;
+            font-weight: 700;
+        }
+
+        .group__owe-line__button {
+            background: rgba(255, 255, 255, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 5px 20px;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            width: fit-content;
+        }
+    }
+
+    form.group__owe-line__search {
+        width: 100%;
+
+        input.group__owe-line__search-input {
+            padding: 10px;
+            background: var(--card);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            color: var(--white);
+        }
+    }
+
+    .group__owe-line__quote-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        align-items: center;
+        padding-block: 30px;
+
+        .group__owe-line__quote {
+            font-size: 16px;
+            color: var(--grey);
+        }
+        .group__owe-line__author {
+            font-size: 16px;
+            color: var(--grey);
+            opacity: .7;
+        }
+    }
+}
+.group__owe-bill {
+    padding: 20px;
+    margin: 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--card);
+
+    .group__owe-bill__details-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .group__owe-bill__avatar {
+            .avatar {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .group__owe-bill__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            text-align: right;
+
+            .group__owe-bill__name {
+
+            }
+
+            .group__owe-bill__surname {
+            }
+        }
+    }
+
+    .group__owe-bill__amount-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .group__owe-bill__amount {
+        }
+
+        .group__owe-bill__pay-button {
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: fit-content;
+        }
+    }
+
+}
+
+.group__owe-bill__mode-selector {
+    display: flex;
+    padding-inline: 30px;
+    justify-content: space-between;
+    gap: 20px;
+
+    button {
+        background: var(--grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        color: var(--white);
+
+        &.i_owe.active {
+            background: var(--danger);
+        }
+        &.owed_to_me.active {
+            background: var(--success);
+        }
+
+    }
+}

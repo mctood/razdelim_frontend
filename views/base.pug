@@ -1,0 +1,18 @@
+doctype html
+
+head
+    link(rel="stylesheet" href='stylesheets/index.css')
+    link(rel="stylesheet" href='owl/assets/owl.carousel.css')
+    script(src="https://code.jquery.com/jquery-3.7.1.js")
+    script(src="js/jquery.tap.js")
+    script(src="owl/owl.carousel.js")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block head
+body
+    include templates/header
+
+    .main
+        block content
+
+    include templates/footer

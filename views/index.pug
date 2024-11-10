@@ -1,0 +1,20 @@
+extends base
+
+block head
+    script(src="js/index.js")
+    - footer_item_active = 1
+
+block content
+    - owe_line_title = "Я должен"
+    - owed_to_me = false
+    - owed_bills = SRV_i_owe
+
+    include templates/owe
+    include templates/owed_carousel
+
+    - owe_line_title = "Мне должны"
+    - owed_to_me = true
+    - owed_bills = SRV_owed_to_me
+
+    include templates/owe
+    include templates/owed_carousel

@@ -1,0 +1,26 @@
+extends base
+
+block head
+    script(src="js/index.js")
+    - footer_item_active = 2
+
+block content
+
+    include groups/title
+
+    -
+        bills = [{
+            title: "A",
+            avatars: ["A", "B", "C"],
+            amount: 500,
+        }, {
+            title: "B",
+            avatars: ["A", "B", "C"],
+            amount: 400,
+        }, {
+            title: "C",
+            avatars: ["A", "B", "C"],
+            amount: 300,
+        }]
+    each bill in bills
+        include groups/bill

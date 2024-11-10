@@ -1,0 +1,22 @@
+.groups-title {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    .groups-title__text {
+        text-align: center;
+    }
+    form.groups-title__search {
+        width: 100%;
+
+        input.groups-title__search-input {
+            padding: 10px;
+            background: var(--card);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            color: var(--white);
+        }
+    }
+}

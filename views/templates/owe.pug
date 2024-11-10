@@ -1,0 +1,15 @@
+.owe-line
+    .owe-line__row
+        .owe-line__title= owe_line_title
+        if owed_bills.length
+            a.owe-line__button(href="/" + (owed_to_me ? 'owe_to_me' : 'i_owe')) Подробнее
+
+    unless owed_bills.length
+        if owed_to_me
+            .owe-line__quote-container
+                .owe-line__quote «Никто ничего вам не должен»
+                .owe-line__author — Конфуций
+        else
+            .owe-line__quote-container
+                .owe-line__quote «Я вам ничего не должен»
+                .owe-line__author — Mr. Freeman

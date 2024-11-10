@@ -1,0 +1,6 @@
+.group-bill
+    .group-bill__title= bill.title
+    .group-bill__avatars
+     each avatar in bill.avatars
+         .avatar(style={backgroundImage: `url(${avatar})`})
+    .group-bill__amount!=(bill.amount > 0 ? "<div class='sum-positive'>+" : "<div class='sum-negative'>") + bill.amount + '&nbsp;₽</div>'

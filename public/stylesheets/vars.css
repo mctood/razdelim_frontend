@@ -1,0 +1,10 @@
+:root {
+    --primary: #2C9FD4;
+    --success: #31B545;
+    --danger: #E64D44;
+    --warning: #F8A917;
+    --grey: #444444;
+    --white: #fff;
+    --card: rgba(217, 217, 217, 0.05);
+    --card-hover: rgba(217, 217, 217, 0.08);
+}

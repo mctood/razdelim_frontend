@@ -1,0 +1,87 @@
+extends base
+
+block head
+    script(src="js/index.js")
+    - header_hide_button = true
+    - footer_item_active = 0
+
+block content
+    - group_line_title = "Название группы"
+    - owed_to_me = false
+    include group/title
+    include group/mode
+
+    .group__i_owe
+        -
+            bills = [
+                {
+                    "name": "A",
+                    "surname": "S",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "B",
+                    "surname": "T",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "C",
+                    "surname": "U",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "D",
+                    "surname": "V",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "E",
+                    "surname": "W",
+                    "avatar": "link",
+                    "amount": 500
+                }
+            ]
+        each bill in bills
+            include group/person
+
+    .group__owed_to_me(style="display: none")
+        - owed_to_me = true
+        -
+            bills = [
+                {
+                    "name": "A",
+                    "surname": "S",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "B",
+                    "surname": "T",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "C",
+                    "surname": "U",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "D",
+                    "surname": "V",
+                    "avatar": "link",
+                    "amount": 500
+                },
+                {
+                    "name": "E",
+                    "surname": "W",
+                    "avatar": "link",
+                    "amount": 500
+                }
+            ]
+        each bill in bills
+            include group/person

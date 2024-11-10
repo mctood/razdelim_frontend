@@ -1,0 +1,48 @@
+extends base
+
+block head
+    script(src="js/index.js")
+    - header_hide_button = true
+    - footer_item_active = 0
+
+block content
+    - owe_line_title = "Мне должны"
+    - owed_to_me = true
+    include owe/title
+
+    -
+        bills = [
+            {
+                "name": "A",
+                "surname": "S",
+                "avatar": "link",
+                "amount": 500
+            },
+            {
+                "name": "B",
+                "surname": "T",
+                "avatar": "link",
+                "amount": 500
+            },
+            {
+                "name": "C",
+                "surname": "U",
+                "avatar": "link",
+                "amount": 500
+            },
+            {
+                "name": "D",
+                "surname": "V",
+                "avatar": "link",
+                "amount": 500
+            },
+            {
+                "name": "E",
+                "surname": "W",
+                "avatar": "link",
+                "amount": 500
+            }
+        ]
+    .owe-bills
+        each bill in bills
+            include owe/person

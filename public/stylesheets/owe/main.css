@@ -1,0 +1,65 @@
+.owe-bill {
+    padding: 20px;
+    margin: 0 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--card);
+
+    .owe-bill__details-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .owe-bill__avatar {
+            .avatar {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .owe-bill__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            text-align: right;
+
+            .owe-bill__name {
+
+            }
+
+            .owe-bill__surname {
+            }
+        }
+    }
+
+    .owe-bill__amount-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .owe-bill__amount {
+        }
+
+        .owe-bill__pay-button {
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: fit-content;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        & {
+            margin: 0;
+        }
+    }
+}

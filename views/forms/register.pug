@@ -1,0 +1,20 @@
+extends base
+
+block head
+    style .main {margin: 0 !important;}
+
+block content
+    .form-header Регистрация
+    .register-form-container
+        form.register-form(method="POST" action="/register/")
+            .register-form__row
+                input.register-form__input(placeholder="Имя" name="first_name" type="text" required)
+                input.register-form__input(placeholder="Фамилия" name="last_name" type="text" required)
+            .register-form__row
+                input.register-form__input(placeholder="Телефон" name="phone" type="phone" required)
+            .register-form__row
+                input.register-form__input(placeholder="Пароль" name="password" type="password" required)
+            .register-form__row
+                button.register-form__submit Зарегистрироваться
+            .register-form__row
+                button.register-form__back(type="button" onclick="window.history.back()") Назад

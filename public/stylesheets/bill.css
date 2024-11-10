@@ -1,0 +1,74 @@
+.bill__title {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+.bill__sides {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.bill__sides-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--grey);
+}
+.bill__side-dots {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+}
+.bill__data-wrapper {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.bill__data {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+
+    * {
+        font-size: 16px;
+    }
+    tr td {
+        padding-block: 10px;
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+    tr:first-child td {
+        padding-top: 0;
+    }
+    tr:last-child td {
+        padding-bottom: 0;
+    }
+}
+.bill__close,
+.bill__back {
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    color: var(--white);
+}
+.bill__back {
+    background: transparent;
+    color: var(--grey);
+}

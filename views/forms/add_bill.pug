@@ -1,0 +1,47 @@
+extends base
+
+block head
+    style .main {margin: 0 !important;}
+    script.
+        $(() => {
+            let group = $("#group"), title = $("#title")
+            group.on('input', () => {
+                if (group.val() === 'new') {
+                    title.show()
+                } else title.hide()
+            })
+        })
+
+block content
+    .form-header Новый счёт
+    .add-bill-form-container
+        form.add-bill-form(method="POST" action="/bill/")
+            .add-bill-form__row
+                input.add-bill-form__input(placeholder="Сумма" name="amount" type="number" required)
+            .add-bill-form__row
+                select.add-bill-form__select#group(name="group" required)
+                    option(value="" disabled selected) Группа
+                    option.primary(value="new") Создать новую
+            .add-bill-form__row#title(style="display:none")
+                input.add-bill-form__input(
+                    placeholder="Название"
+                    name="title"
+                    type="text"
+                    required
+                )
+            .add-bill-form__row
+                textarea.add-bill-form__textarea(
+                    placeholder="Текст для напоминания"
+                    name="reminder"
+                    spellcheck="false"
+                    required
+                )
+            .add-bill-form__row
+                .add-bill-form__checks
+                    label
+                        span Разделить поровну
+                        input(name="divide" type="checkbox")
+            .add-bill-form__row
+                button.add-bill-form__submit Создать счёт
+            .add-bill-form__row
+                button.add-bill-form__back(type="button" onclick="window.history.back()") Назад

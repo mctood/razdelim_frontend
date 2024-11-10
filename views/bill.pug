@@ -1,0 +1,55 @@
+extends base
+
+block head
+    script(src="js/index.js")
+    - header_hide_button = true
+
+block content
+    .bill__title Счёт #1
+    .bill__sides
+        .bill__side
+            .avatar
+        .bill__side-dots
+            each _ in [0, 1, 2]
+                .bill__sides-dot
+        .bill__side
+            .avatar
+
+    -
+        bill_data = {
+            "Название": "Значение 1",
+            "Сумма": "Значение 2",
+            "Группа": "Значение 3",
+        }
+        bill_transactions = [
+            {
+                from: "A",
+                to: "B",
+                amount: 500
+            },
+            {
+                from: "C",
+                to: "B",
+                amount: 1100
+            },
+            {
+                from: "A",
+                to: "B",
+                amount: 900
+            },
+        ]
+    .bill__data-wrapper
+        table.bill__data
+            each value, key in bill_data
+                tr
+                    td #{key}
+                    td #{value}
+        .bill__data-separator Транзакции по счёту
+        table.bill__data
+            each t in bill_transactions
+                tr
+                    td #{t.from} -> #{t.to}
+                    td #{t.amount}
+
+        button.bill__close Закрыть счёт
+        button.bill__back(onclick="window.history.back()") Назад

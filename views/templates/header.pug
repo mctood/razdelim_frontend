@@ -1,0 +1,15 @@
+link(rel="stylesheet" href='stylesheets/header.css')
+
+.header
+    .header__row
+        .header__sum!=(header_sum > 0 ? "<div class='sum-positive'>+" : "<div class='sum-negative'>") + header_sum + '&nbsp;₽</div>'
+        .header__desktop-nav
+            a.header__desktop-nav-item(href="/" class=(footer_item_active === 1 ? "active" : "")) Счета
+            a.header__desktop-nav-item(href="/groups" class=(footer_item_active === 2 ? "active" : "")) Группы
+        a.avatar(href="/profile")
+    unless header_hide_button
+        a.header__button(href='/add_bill')
+            include ../svg/plus.svg
+            span= "Создать счёт"
+    else
+        style .main {margin-top: 120px !important;}

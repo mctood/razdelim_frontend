@@ -1,0 +1,15 @@
+//-
+    owed_persons
+    owed_to_me
+.owed-cards-container
+    .owed-cards
+        each bill in owed_bills
+            .owed-card
+                .avatar(style={
+                    width: "64px",
+                    height: "64px"
+                })
+                .owed-card__title= bill.person
+                .owed-card__amount(style={
+                    color: owed_to_me ? "var(--success)" : "var(--danger)"
+                })!= bill.amount + "&nbsp;" + "₽"

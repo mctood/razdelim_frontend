@@ -1,0 +1,64 @@
+.owed-card {
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 144px;
+    min-width: 144px;
+    gap: 10px;
+    height: 200px;
+    border-radius: 5px;
+    background: var(--card);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .owed-card__amount {
+        font-size: 22px;
+        font-family: "Product Sans", sans-serif;
+        font-weight: 700;
+    }
+    .owed-card__title {
+        text-align: center;
+        font-family: "Product Sans", sans-serif;
+        font-size: 16px;
+        flex: 1;
+        width: 100%;
+        text-overflow: ellipsis;
+    }
+    &:hover {
+        background: var(--card-hover);
+    }
+    @media screen and (min-width: 768px) {
+        & {
+            width: 244px;
+            min-width: 244px;
+        }
+    }
+}
+.owed-cards {
+    touch-action: manipulation;
+    display: flex;
+    overflow: hidden;
+}
+
+.owed-cards-container {
+    padding-inline: 30px;
+}
+
+.owl-item:last-child {
+    margin-right: 0 !important;
+}
+
+.owl-stage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-nav.disabled {
+    display: none;
+}
